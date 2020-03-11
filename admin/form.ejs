@@ -1,0 +1,82 @@
+﻿        <%- include ('header.ejs'); -%>
+        <div id="page-wrapper" >
+		    <div class="header"> 
+                        <h1 class="page-header">
+                             Form Elements <small>Best form elements.</small>
+                        </h1>
+						<ol class="breadcrumb">
+					  <li><a href="#">Home</a></li>
+					  <li><a href="#">Forms</a></li>
+					  <li class="active">Data</li>
+					</ol> 
+			</div>
+	    
+            <div id="page-inner"> 
+                <% if (message.length > 0) { %>
+                    <div class="alert alert-success"><%= message %></div>
+                <% } %> 
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="card-title">
+                                        <div class="title">Admin User Form</div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <form id="uploadForm" enctype="multipart/form-data" action="http://localhost:8080/uploadfiles" method="post">  
+                                        <div class="form-group">
+                                            <label for="admin_username">Admin Username</label>
+                                            <input type="text" class="form-control" id="admin_username" name="admin_username" placeholder="Enter Username">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="admin_password">Password</label>
+                                            <input type="text" class="form-control" id="admin_password" name="admin_password" placeholder="Password">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="t_staff_type">Group</label>
+                                            <input type="text" class="form-control" id="t_staff_type" name="t_staff_type" placeholder="Group">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="myfile">File input</label>
+                                            <input type="file" id="myfile" name="myfile">
+                                            <p class="help-block">Example block-level help text here.</p>
+                                        </div>
+                                        <div class="checkbox">
+                                          <div class="checkbox3 checkbox-round">
+                                            <input type="checkbox" id="checkbox-1">
+                                            <label for="checkbox-1">
+                                              Check me out
+                                            </label>
+                                          </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <footer><p>All right reserved. Template by: <a href="https://github.com/vikashchaudhary007">Vikash Chaudhary</a></p></footer>
+			</div>
+             <!-- /. PAGE INNER  -->
+        </div>
+         <!-- /. PAGE WRAPPER  -->
+    </div>
+<!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+<!-- jQuery Js -->
+<script src="http://localhost/myapp/admin/assets/js/jquery-1.10.2.js"></script>
+  <!-- Bootstrap Js -->
+<script src="http://localhost/myapp/admin/assets/js/bootstrap.min.js"></script>
+<!-- Metis Menu Js -->
+<script src="http://localhost/myapp/admin/assets/js/jquery.metisMenu.js"></script>
+<script src="http://localhost/myapp/admin/assets/js/select2.full.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".selectbox").select2();
+});
+</script>
+<script src="http://localhost/myapp/admin/assets/js/custom-scripts.js"></script> 
+</body>
+</html>
